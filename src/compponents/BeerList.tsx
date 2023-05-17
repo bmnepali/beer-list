@@ -30,18 +30,19 @@ const BeerList: React.FC<BeerListProps> = ({
           </div>
         ))}
         {!beerList.length ? <div>{emptyMessage()}</div> : null}
-      </div>
-      {loadMore?.show ? (
-        <div className="text-center mb-3">
-          <div className="text-primary load-more" onClick={loadMore.onLoadMore}>
-            {loadMore?.isLoading ? (
-              <div className="spinner-border text-primary spinner-border-sm" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-            ) : <>Load More <FaAngleDown /></>}
+
+        {loadMore?.show ? (
+          <div className="text-center  mt-2 mb-3">
+            <div className="text-primary load-more" onClick={loadMore.onLoadMore}>
+              {loadMore?.isLoading ? (
+                <div className="spinner-border text-primary spinner-border-sm" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              ) : <>Load More <FaAngleDown /></>}
+            </div>
           </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </>
   );
 };

@@ -42,21 +42,11 @@ const BeerItem: React.FC<BeerItemProps> = ({ beer }) => {
         </div>
         <div className="col-lg-10 col-md-9">
           <div className="beer-details">
-            <h4 className="title">
-              <TextTruncate
-                line={1}
-                element="span"
-                truncateText="…"
-                text={beer.name}
-              />
+            <h4 className="title overflow-text">
+              {beer.name}
             </h4>
-            <div className="tagline mb-2">
-              <TextTruncate
-                line={1}
-                element="span"
-                truncateText="…"
-                text={(beer as IAllBeer).tagline || (beer as IMyBeer).genere || ''}
-              />
+            <div className="tagline mb-2 overflow-text">
+              {(beer as IAllBeer).tagline || (beer as IMyBeer).genere || ''}
             </div>
             <div className="description">
               <TextTruncate
