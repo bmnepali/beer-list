@@ -1,0 +1,138 @@
+.houzz-app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.beer-item {
+  padding: 20px;
+  border-radius: 3px;
+  height: auto;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+}
+
+.beer-item-hover:hover {
+  background-color: #f8f9fa;
+  box-shadow: none;
+}
+
+.beer-item img {
+  height: 100px;
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: inherit;
+}
+
+.beer-details {
+  text-align: left;
+}
+
+.beer-details .img-wrapper {
+  height: 110px;
+  width: 100px;
+}
+
+.beer-details .tagline {
+  color: rgb(204, 122, 28);
+}
+
+.beer-details .description {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-tabs-item {
+  margin-right: 10px;
+  color: #7a7979;
+  border-bottom: 3px solid #eeeeee;
+  font-weight: 350;
+}
+
+.custom-tabs-item.active {
+  color: #5f5f5f;
+  border-bottom: 3px solid rgb(5, 109, 206);
+  font-weight: 400;
+}
+
+.custom-tabs-link {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-tabs-link:hover,
+.custom-tabs-link:focus {
+  color: rgb(61, 60, 60);
+}
+
+.load-more {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.empty-list {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8f8d8d;
+  border-radius: 3px;
+}
+
+.custom-pointer {
+  cursor: pointer;
+}
+
+.loader-wrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 767px) {
+  .beer-item {
+    height: auto;
+    min-height: 130px;
+  }
+
+  .beer-details {
+    text-align: center;
+  }
+
+  .beer-details .title {
+    margin-top: 10px;
+  }
+}
+
+/* Media queries for mobile view */
+@media (min-width: 767px) {
+  .beer-item {
+    height: auto;
+    max-height: 150px;
+  }
+}
